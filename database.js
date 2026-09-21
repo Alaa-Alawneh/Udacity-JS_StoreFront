@@ -1,0 +1,18 @@
+require("dotenv").config();
+
+module.exports = {
+  dev: {
+    driver: "pg",
+    host: process.env.POSTGRES_HOST,
+    database: process.env.POSTGRES_DB,
+    user: process.env.POSTGRES_USER,
+    password: process.env.POSTGRES_PASSWORD
+  },
+  test: {
+    driver: "pg",
+    host: process.env.POSTGRES_HOST,
+    database: process.env.POSTGRES_TEST_DB,
+    user: process.env.POSTGRES_USER,
+    password: process.env.POSTGRES_PASSWORD
+  }
+};
